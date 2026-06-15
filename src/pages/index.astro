@@ -1,9 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Adsense from "../components/Adsense.astro";
+import products from "../../data/products.json";
+import brands from "../../data/brands.json";
+import categories from "../../data/categories.json";
 ---
-<BaseLayout title="SeoulBeauty">
-<h2>Latest Products</h2>
+
+<BaseLayout title="Discover Korean Skincare Products & Reviews">
+
+<h2>Discover Korean Skincare Products & Reviews</h2>
+
+<p>
+Find trending Korean skincare products, review videos and skincare routines.
+</p>
+
 <Adsense slot="homepage-top" />
-<p>Homepage placeholder</p>
+
+<h3>Latest Products</h3>
+
+<ul>
+{
+products.map(product => (
+<li>
+<a href={`/product/${product.slug}/`}>
+{product.name}
+</a>
+</li>
+))
+}
+</ul>
+
+<h3>Browse Brands</h3>
+
+<ul>
+{
+brands.map(brand => (
+<li>
+<a href={`/brand/${brand.slug}/`}>
+{brand.name}
+</a>
+</li>
+))
+}
+</ul>
+
+<Adsense slot="homepage-middle" />
+
+<h3>Browse Categories</h3>
+
+<ul>
+{
+categories.map(category => (
+<li>
+<a href={`/category/${category.slug}/`}>
+{category.name}
+</a>
+</li>
+))
+}
+</ul>
+
 </BaseLayout>

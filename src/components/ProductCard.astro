@@ -1,4 +1,9 @@
 ---
 const { title, link } = Astro.props;
 ---
-<a href={link}><div>{title}</div></a>
+
+<a href={link}>
+<div style="padding:16px;border:1px solid #ddd;margin-bottom:12px;">
+{title}
+</div>
+</a>
