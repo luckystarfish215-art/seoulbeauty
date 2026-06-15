@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "beauty-devices",
+    "name": "Beauty Devices"
+  },
+  {
+    "slug": "serums",
+    "name": "Serums"
+  },
+  {
+    "slug": "toners",
+    "name": "Toners"
+  },
+  {
+    "slug": "cleansers",
+    "name": "Cleansers"
+  },
+  {
+    "slug": "sunscreens",
+    "name": "Sunscreens"
+  },
+  {
+    "slug": "bb-creams",
+    "name": "BB Creams"
+  },
+  {
+    "slug": "masks",
+    "name": "Masks"
+  },
+  {
+    "slug": "moisturisers",
+    "name": "Moisturisers"
+  }
+]
