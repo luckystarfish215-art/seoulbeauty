@@ -1,0 +1,14 @@
+---
+import SEO from "../components/SEO.astro";
+const { title="SeoulBeauty" } = Astro.props;
+---
+<html>
+<head>
+<SEO title={title} description="Korean skincare discovery platform" />
+</head>
+<body>
+<header><h1>SeoulBeauty</h1></header>
+<main><slot /></main>
+<footer>© SeoulBeauty</footer>
+</body>
+</html>

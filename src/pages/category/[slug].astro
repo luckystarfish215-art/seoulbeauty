@@ -1,0 +1,7 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const { slug } = Astro.params;
+---
+<BaseLayout title={`Category ${slug}`}>
+<h2>Category: {slug}</h2>
+</BaseLayout>
