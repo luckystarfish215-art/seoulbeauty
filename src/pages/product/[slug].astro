@@ -1,11 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Adsense from "../../components/Adsense.astro";
+import products from "../../../data/products.json";
 const { slug } = Astro.params;
+const product = products.find(p => p.slug === slug);
 ---
-<BaseLayout title={`Product ${slug}`}>
-<h2>{slug}</h2>
-<Adsense slot="product-top" />
-<p>Product page placeholder</p>
-<Adsense slot="product-bottom" />
+<BaseLayout title={product?.name || slug}>
+<h1>{product?.name || slug}</h1>
+<p><strong>Brand:</strong> {product?.brand}</p>
+<p><strong>Category:</strong> {product?.category}</p>
+<h2>Why It Is Trending</h2>
+<p>This Korean beauty product is frequently featured by skincare creators and short-form video reviews.</p>
+<h2>Related Products</h2>
+<ul>
+{products.filter(p=>p.brand===product?.brand && p.slug!==slug).slice(0,5).map(p => <li><a href={`/product/${p.slug}/`}>{p.name}</a></li>)}
+</ul>
 </BaseLayout>

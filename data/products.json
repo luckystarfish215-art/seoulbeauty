@@ -22,5 +22,53 @@
     "name": "Beauty of Joseon Relief Sun",
     "brand": "beauty-of-joseon",
     "category": "sunscreens"
+  },
+  {
+    "slug": "arencia-fresh-green-cleanser",
+    "name": "Arencia Fresh Green Cleanser",
+    "brand": "arencia",
+    "category": "cleansers"
+  },
+  {
+    "slug": "arencia-rice-mochi-cleanser",
+    "name": "Arencia Rice Mochi Cleanser",
+    "brand": "arencia",
+    "category": "cleansers"
+  },
+  {
+    "slug": "anua-heartleaf-cleansing-oil",
+    "name": "Anua Heartleaf Cleansing Oil",
+    "brand": "anua",
+    "category": "cleansers"
+  },
+  {
+    "slug": "skin1004-madagascar-centella-ampoule",
+    "name": "Skin1004 Madagascar Centella Ampoule",
+    "brand": "skin1004",
+    "category": "ampoules"
+  },
+  {
+    "slug": "skin1004-hyalu-cica-sunscreen",
+    "name": "Skin1004 Hyalu-Cica Sunscreen",
+    "brand": "skin1004",
+    "category": "sunscreens"
+  },
+  {
+    "slug": "round-lab-dokdo-toner",
+    "name": "Round Lab Dokdo Toner",
+    "brand": "round-lab",
+    "category": "toners"
+  },
+  {
+    "slug": "medicube-zero-pore-pad",
+    "name": "Medicube Zero Pore Pad",
+    "brand": "medicube",
+    "category": "pads"
+  },
+  {
+    "slug": "beauty-of-joseon-glow-serum",
+    "name": "Beauty of Joseon Glow Serum",
+    "brand": "beauty-of-joseon",
+    "category": "serums"
   }
 ]
