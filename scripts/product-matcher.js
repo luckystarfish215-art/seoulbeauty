@@ -1,8 +1,18 @@
+import fs from "fs";
 
-// SeoulBeauty Phase 2.7
-// Product Matching Engine
+const products = JSON.parse(
+  fs.readFileSync(
+    new URL("../data/products.json", import.meta.url),
+    "utf8"
+  )
+);
 
-const products = require("../data/products.json");
+const videos = JSON.parse(
+  fs.readFileSync(
+    new URL("../data/videos.json", import.meta.url),
+    "utf8"
+  )
+);
 
 function matchProduct(videoTitle) {
   const title = (videoTitle || "").toLowerCase();
@@ -10,13 +20,19 @@ function matchProduct(videoTitle) {
   for (const product of products) {
     const name = product.name.toLowerCase();
 
+    // exact product name
     if (title.includes(name)) {
       return product;
     }
 
-    const words = name.split(" ").filter(w => w.length > 3);
+    // keyword matching
+    const words = name
+      .split(" ")
+      .filter((w) => w.length > 3);
 
-    const matchedWords = words.filter(w => title.includes(w));
+    const matchedWords = words.filter((w) =>
+      title.includes(w)
+    );
 
     if (matchedWords.length >= 2) {
       return product;
@@ -26,4 +42,31 @@ function matchProduct(videoTitle) {
   return null;
 }
 
-module.exports = { matchProduct };
+const matched = [];
+
+for (const video of videos) {
+  const product = matchProduct(video.title);
+
+  if (!product) continue;
+
+  matched.push({
+    videoId: video.videoId,
+    title: video.title,
+    channel: video.channel,
+    publishedAt: video.publishedAt,
+
+    productSlug: product.slug,
+    productName: product.name,
+    brand: product.brand,
+    category: product.category
+  });
+}
+
+fs.writeFileSync(
+  new URL("../data/product-videos.json", import.meta.url),
+  JSON.stringify(matched, null, 2)
+);
+
+console.log(
+  `Matched ${matched.length} of ${videos.length} videos`
+);
