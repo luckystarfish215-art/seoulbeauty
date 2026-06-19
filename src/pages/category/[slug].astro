@@ -11,8 +11,26 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+
+const categoryProducts = products.filter(
+  p => p.category === slug
+);
 ---
 
 <BaseLayout title={`Category ${slug}`}>
-  <h1>Category: {slug}</h1>
+  <h1>{slug}</h1>
+
+  <h2>Products</h2>
+
+  <ul>
+    {
+      categoryProducts.map(product => (
+        <li>
+          <a href={`/product/${product.slug}/`}>
+            {product.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </BaseLayout>
