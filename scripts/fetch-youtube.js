@@ -34,7 +34,6 @@ for (const rule of rules) {
 for (const query of rule.searches) {
 const videos = await searchYoutube(query);
 
-```
   videos.forEach((v) => {
     if (!v?.id?.videoId) return;
 
@@ -51,7 +50,6 @@ const videos = await searchYoutube(query);
     });
   });
 }
-```
 
 }
 
