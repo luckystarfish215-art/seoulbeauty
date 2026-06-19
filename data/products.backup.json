@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "medicube-age-r-booster-pro",
+    "name": "Medicube AGE-R Booster Pro",
+    "brand": "medicube",
+    "category": "beauty-devices"
+  },
+  {
+    "slug": "anua-heartleaf-77-toner",
+    "name": "Anua Heartleaf 77 Toner",
+    "brand": "anua",
+    "category": "toners"
+  },
+  {
+    "slug": "round-lab-birch-juice-sunscreen",
+    "name": "Round Lab Birch Juice Sunscreen",
+    "brand": "round-lab",
+    "category": "sunscreens"
+  },
+  {
+    "slug": "beauty-of-joseon-relief-sun",
+    "name": "Beauty of Joseon Relief Sun",
+    "brand": "beauty-of-joseon",
+    "category": "sunscreens"
+  }
+]

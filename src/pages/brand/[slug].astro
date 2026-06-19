@@ -1,7 +1,74 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import products from "../../../data/products.json";
+import productVideos from "../../../data/product-videos.json";
+
+const brands = [...new Set(products.map(p => p.brand))];
+
+export async function getStaticPaths() {
+  return brands.map(brand => ({
+    params: { slug: brand }
+  }));
+}
+
 const { slug } = Astro.params;
+
+const brandProducts = products.filter(
+  p => p.brand === slug
+);
+
+const brandVideos = productVideos.filter(
+  v => v.brand === slug
+);
+
+const pageTitle =
+  `${slug} Reviews, Products & Buying Guide`;
 ---
-<BaseLayout title={`Brand ${slug}`}>
-<h2>Brand: {slug}</h2>
+
+<BaseLayout title={pageTitle}>
+
+<h1>{slug}</h1>
+
+<p>
+Browse products, reviews and videos for {slug}.
+</p>
+
+<h2>Products</h2>
+
+<ul>
+{
+  brandProducts.map(product => (
+    <li>
+      <a href={`/product/${product.slug}/`}>
+        {product.name}
+      </a>
+    </li>
+  ))
+}
+</ul>
+
+<h2>Latest Reviews</h2>
+
+{
+  brandVideos.length === 0 ? (
+    <p>No reviews yet.</p>
+  ) : (
+    <ul>
+      {
+        brandVideos.slice(0, 20).map(video => (
+          <li>
+            <a
+              href={`https://www.youtube.com/watch?v=${video.videoId}`}
+              target="_blank"
+            >
+              {video.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  )
+}
+
 </BaseLayout>

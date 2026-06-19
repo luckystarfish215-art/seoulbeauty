@@ -6,11 +6,110 @@
     "category": "beauty-devices"
   },
   {
+    "slug": "medicube-deep-vita-c-capsule-cream",
+    "name": "Medicube Deep Vita C Capsule Cream",
+    "brand": "medicube",
+    "category": "moisturizers"
+  },
+  {
+    "slug": "medicube-triple-collagen-serum",
+    "name": "Medicube Triple Collagen Serum",
+    "brand": "medicube",
+    "category": "serums"
+  },
+  {
+    "slug": "medicube-collagen-jelly-cream",
+    "name": "Medicube Collagen Jelly Cream",
+    "brand": "medicube",
+    "category": "moisturizers"
+  },
+  {
+    "slug": "medicube-zero-pore-pad",
+    "name": "Medicube Zero Pore Pad",
+    "brand": "medicube",
+    "category": "toners"
+  },
+  {
+    "slug": "medicube-exosome-shot-serum",
+    "name": "Medicube Exosome Shot Serum",
+    "brand": "medicube",
+    "category": "serums"
+  },
+
+  {
     "slug": "anua-heartleaf-77-toner",
     "name": "Anua Heartleaf 77 Toner",
     "brand": "anua",
     "category": "toners"
   },
+  {
+    "slug": "anua-heartleaf-80-ampoule",
+    "name": "Anua Heartleaf 80 Ampoule",
+    "brand": "anua",
+    "category": "ampoules"
+  },
+  {
+    "slug": "anua-rice-70-toner",
+    "name": "Anua Rice 70 Toner",
+    "brand": "anua",
+    "category": "toners"
+  },
+  {
+    "slug": "anua-niacinamide-10-serum",
+    "name": "Anua Niacinamide 10 Serum",
+    "brand": "anua",
+    "category": "serums"
+  },
+  {
+    "slug": "anua-peach-70-serum",
+    "name": "Anua Peach 70 Serum",
+    "brand": "anua",
+    "category": "serums"
+  },
+  {
+    "slug": "anua-heartleaf-cleansing-oil",
+    "name": "Anua Heartleaf Cleansing Oil",
+    "brand": "anua",
+    "category": "cleansers"
+  },
+
+  {
+    "slug": "beauty-of-joseon-relief-sun",
+    "name": "Beauty of Joseon Relief Sun",
+    "brand": "beauty-of-joseon",
+    "category": "sunscreens"
+  },
+  {
+    "slug": "beauty-of-joseon-glow-serum",
+    "name": "Beauty of Joseon Glow Serum",
+    "brand": "beauty-of-joseon",
+    "category": "serums"
+  },
+  {
+    "slug": "beauty-of-joseon-revive-serum",
+    "name": "Beauty of Joseon Revive Serum",
+    "brand": "beauty-of-joseon",
+    "category": "serums"
+  },
+  {
+    "slug": "beauty-of-joseon-dynasty-cream",
+    "name": "Beauty of Joseon Dynasty Cream",
+    "brand": "beauty-of-joseon",
+    "category": "moisturizers"
+  },
+  {
+    "slug": "beauty-of-joseon-ginseng-essence-water",
+    "name": "Beauty of Joseon Ginseng Essence Water",
+    "brand": "beauty-of-joseon",
+    "category": "essences"
+  },
+  {
+    "slug": "beauty-of-joseon-green-plum-cleanser",
+    "name": "Beauty of Joseon Green Plum Cleanser",
+    "brand": "beauty-of-joseon",
+    "category": "cleansers"
+  },
+
   {
     "slug": "round-lab-birch-juice-sunscreen",
     "name": "Round Lab Birch Juice Sunscreen",
@@ -18,9 +117,58 @@
     "category": "sunscreens"
   },
   {
-    "slug": "beauty-of-joseon-relief-sun",
-    "name": "Beauty of Joseon Relief Sun",
-    "brand": "beauty-of-joseon",
+    "slug": "round-lab-dokdo-toner",
+    "name": "Round Lab Dokdo Toner",
+    "brand": "round-lab",
+    "category": "toners"
+  },
+  {
+    "slug": "round-lab-dokdo-cleanser",
+    "name": "Round Lab Dokdo Cleanser",
+    "brand": "round-lab",
+    "category": "cleansers"
+  },
+  {
+    "slug": "round-lab-birch-juice-moisturizing-cream",
+    "name": "Round Lab Birch Juice Moisturizing Cream",
+    "brand": "round-lab",
+    "category": "moisturizers"
+  },
+  {
+    "slug": "round-lab-soybean-nourishing-cream",
+    "name": "Round Lab Soybean Nourishing Cream",
+    "brand": "round-lab",
+    "category": "moisturizers"
+  },
+
+  {
+    "slug": "skin1004-madagascar-centella-ampoule",
+    "name": "SKIN1004 Madagascar Centella Ampoule",
+    "brand": "skin1004",
+    "category": "ampoules"
+  },
+  {
+    "slug": "skin1004-hyalu-cica-water-fit-sun-serum",
+    "name": "SKIN1004 Hyalu-Cica Water-Fit Sun Serum",
+    "brand": "skin1004",
     "category": "sunscreens"
+  },
+  {
+    "slug": "skin1004-centella-cleansing-oil",
+    "name": "SKIN1004 Centella Cleansing Oil",
+    "brand": "skin1004",
+    "category": "cleansers"
+  },
+  {
+    "slug": "skin1004-probio-cica-intensive-ampoule",
+    "name": "SKIN1004 Probio-Cica Intensive Ampoule",
+    "brand": "skin1004",
+    "category": "ampoules"
+  },
+  {
+    "slug": "skin1004-tone-brightening-capsule-ampoule",
+    "name": "SKIN1004 Tone Brightening Capsule Ampoule",
+    "brand": "skin1004",
+    "category": "ampoules"
   }
 ]

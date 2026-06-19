@@ -25,7 +25,10 @@ function matchProduct(videoTitle) {
       return product;
     }
 
+<<<<<<< HEAD
     // keyword matching
+=======
+>>>>>>> b791312 (Expand products to 28 and improve video matching)
     const words = name
       .split(" ")
       .filter((w) => w.length > 3);
@@ -54,7 +57,10 @@ for (const video of videos) {
     title: video.title,
     channel: video.channel,
     publishedAt: video.publishedAt,
+<<<<<<< HEAD
 
+=======
+>>>>>>> b791312 (Expand products to 28 and improve video matching)
     productSlug: product.slug,
     productName: product.name,
     brand: product.brand,

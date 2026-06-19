@@ -1,7 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import products from "../../../data/products.json";
+
+const categories = [...new Set(products.map(p => p.category))];
+
+export async function getStaticPaths() {
+  return categories.map(category => ({
+    params: { slug: category }
+  }));
+}
+
 const { slug } = Astro.params;
 ---
+
 <BaseLayout title={`Category ${slug}`}>
-<h2>Category: {slug}</h2>
+  <h1>Category: {slug}</h1>
 </BaseLayout>

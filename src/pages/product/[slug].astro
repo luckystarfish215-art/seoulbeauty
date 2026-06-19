@@ -1,11 +1,75 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Adsense from "../../components/Adsense.astro";
+
+import products from "../../../data/products.json";
+import productVideos from "../../../data/product-videos.json";
+
+export async function getStaticPaths() {
+  return products.map(product => ({
+    params: {
+      slug: product.slug
+    }
+  }));
+}
+
 const { slug } = Astro.params;
+
+const product = products.find(
+  (p) => p.slug === slug
+);
+
+if (!product) {
+  throw new Error(`Product not found: ${slug}`);
+}
+
+const videos = productVideos
+  .filter((v) => v.productSlug === slug)
+  .slice(0, 10);
+
+const pageTitle =
+  `${product.name} Reviews, Videos & Buying Guide`;
 ---
-<BaseLayout title={`Product ${slug}`}>
-<h2>{slug}</h2>
+
+<BaseLayout title={pageTitle}>
+
+<h1>{product.name}</h1>
+
+<p>
+  Brand: {product.brand}
+</p>
+
+<p>
+  Category: {product.category}
+</p>
+
 <Adsense slot="product-top" />
-<p>Product page placeholder</p>
+
+<h2>Latest Reviews</h2>
+
+{
+  videos.length === 0 ? (
+    <p>No reviews found yet.</p>
+  ) : (
+    <ul>
+      {
+        videos.map((video) => (
+          <li style="margin-bottom:1rem;">
+            <a
+              href={`https://www.youtube.com/watch?v=${video.videoId}`}
+              target="_blank"
+            >
+              {video.title}
+            </a>
+            <br />
+            <small>{video.channel}</small>
+          </li>
+        ))
+      }
+    </ul>
+  )
+}
+
 <Adsense slot="product-bottom" />
+
 </BaseLayout>
