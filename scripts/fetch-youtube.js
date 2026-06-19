@@ -32,11 +32,9 @@ const seen = new Set();
 
 for (const rule of rules) {
 for (const query of rule.searches) {
-console.log(`Searching: ${query}`);
+const videos = await searchYoutube(query);
 
 ```
-  const videos = await searchYoutube(query);
-
   videos.forEach((v) => {
     if (!v?.id?.videoId) return;
 
