@@ -1,8 +1,4 @@
-
-// SeoulBeauty Phase 2.5
-// Real YouTube Search
-
-const fs = require("fs");
+import fs from "fs";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
@@ -19,15 +15,24 @@ async function searchYoutube(query) {
 }
 
 async function main() {
-  const rules = require("../data/search-rules.json");
+  const rules = JSON.parse(
+    fs.readFileSync(
+      new URL("../data/search-rules.json", import.meta.url),
+      "utf8"
+    )
+  );
 
   const results = [];
+  const seen = new Set();
 
   for (const rule of rules) {
     for (const query of rule.searches) {
       const videos = await searchYoutube(query);
 
       videos.forEach(v => {
+        if (seen.has(v.id.videoId)) return;
+        seen.add(v.id.videoId);
+
         results.push({
           brand: rule.brand,
           videoId: v.id.videoId,
@@ -41,7 +46,7 @@ async function main() {
   }
 
   fs.writeFileSync(
-    "./data/videos.json",
+    new URL("../data/videos.json", import.meta.url),
     JSON.stringify(results, null, 2)
   );
 
